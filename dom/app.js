@@ -22,13 +22,22 @@ div.style.borderLeftColor = "red";
 div.style.borderRightColor = "red";
 div.style.fontFamily = "Arial";
 
-// const liste = document.getElementByClassName("list");
-// list.style.color = "red";
-// list.style.backgroundColor = "blue";
+const liste = document.getElementsByClassName("list");
+console.log(liste);
 
-const lists = document.getElementsByTagName("li");
+for (let i = 0; i < liste.length; i++) {
+  liste[i].style.color = "red";
+}
+
+// const lists = document.getElementsByTagName("li");
 // lists[1].style.fontSize = "20px";
 
-for (let i = 0; i < lists.length; i++) {
-  lists[i].style.color = "blue";
-}
+// for (let i = 0; i < lists.length; i++) {
+//   lists[i].style.color = "blue";
+// }
+
+// const prviLi = document.querySelectorAll(".list");
+
+// for (i = 0; i < prviLi.length; i++) {
+//   prviLi[i].style.color = "red";
+// }
