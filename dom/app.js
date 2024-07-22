@@ -29,14 +29,14 @@ for (let i = 0; i < liste.length; i++) {
   liste[i].style.color = "red";
 }
 
-// const lists = document.getElementsByTagName("li");
-// lists[1].style.fontSize = "20px";
+const lists = document.getElementsByTagName("li");
+lists[1].style.fontSize = "20px";
 
 // for (let i = 0; i < lists.length; i++) {
 //   lists[i].style.color = "blue";
 // }
 
-// const prviLi = document.querySelectorAll(".list");
+const prviLi = document.querySelectorAll(".list");
 
 // for (i = 0; i < prviLi.length; i++) {
 //   prviLi[i].style.color = "red";
