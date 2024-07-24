@@ -1,7 +1,7 @@
 //Get Element By Id ()
 
-const title = document.getElementById("main-heading");
-console.log(title);
+// const title = document.getElementById("main-heading");
+// console.log(title);
 
 //Get Elements By Class Name ()
 
@@ -10,5 +10,17 @@ console.log(title);
 
 //Get Elements By Tag Name ()
 
-const listItems = document.getElementsByClassName("li");
-console.log(listItems);
+// const listItems = document.getElementsByClassName("li");
+// console.log(listItems);
+
+//Query Selector
+
+// const container = document.querySelector("div");
+
+// console.log(container);
+
+//Query Selector All
+
+const container = document.querySelectorAll("div");
+
+console.log(container);
