@@ -38,3 +38,5 @@ const paragraf = document.querySelector("#paragraf");
 function promeni(boja) {
   paragraf.style.color = boja;
 }
+
+const title = document.querySelector("#");

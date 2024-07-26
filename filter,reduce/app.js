@@ -82,9 +82,16 @@ const zbirParnih = parniBrojevi.reduce(function (total, broj) {
     return broj + total;
   }
   return total;
-});
+}, 0);
 
 console.log(zbirParnih);
+
+const niz = [1, 2, 3, 4, 5, 6];
+const niz1 = niz.reduce(function (total, broj) {
+  return broj + total;
+}, 0);
+
+console.log(niz1);
 
 const macka = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 

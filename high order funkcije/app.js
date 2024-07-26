@@ -46,6 +46,11 @@ console.log(noviNiz);
 
 //const destinacijeimena = destinacije.map(function(name)) {
 //   return name.name
+function (){}
 //}
 
-console.log(destinacijeimena);
+const ajsa = (value) => value;
+
+
+
+console.log(ajsa("radi"));
