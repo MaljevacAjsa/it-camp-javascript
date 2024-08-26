@@ -18,26 +18,9 @@ body {
   border-color: rgba(255, 255, 255, 0.457);
 }
 
-.dugme {
-  background-color: rgb(0, 9, 30);
-
-  height: 60px;
-  width: 60px;
-  color: white;
-  border-radius: 10px;
-  border-color: rgba(255, 255, 255, 0.457);
-  transition: all 0.4s ease;
-  box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
-}
-
 .dugme-broj:hover {
   cursor: pointer;
-  background-color: rgb(40, 41, 101);
-}
-
-.dugme:hover {
-  cursor: pointer;
-  background-color: rgb(17, 49, 126);
+  background-color: rgb(9, 74, 102);
 }
 
 .veliki-div {
@@ -63,6 +46,7 @@ input {
   margin-bottom: 30px;
   background-color: rgb(14, 0, 37);
   font-size: 20px;
+  color: white;
 }
 
 .jednako {
@@ -78,7 +62,7 @@ input {
 }
 
 .jednako:hover {
-  background-color: rgb(76, 28, 89);
+  background-color: rgb(16, 81, 20);
   box-shadow: -8px -8px -15px rgb(255, 255, 255),
     5px 5px 15px rgb(255, 255, 255);
 }

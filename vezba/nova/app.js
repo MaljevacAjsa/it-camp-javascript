@@ -39,3 +39,37 @@ saki
   .catch((ja) => {
     console.log(ja);
   });
+
+setTimeout(beba, 13000);
+
+function beba() {
+  console.log("beba naaacha");
+}
+
+let counter = 0;
+const countInterval = setInterval(count, 3000);
+
+function count() {
+  console.log(counter++);
+  if (counter > 5) {
+    clearInterval(countInterval);
+  }
+}
+
+let ajsa = `mau`;
+
+switch (ajsa) {
+  case `srecna`:
+    console.log(`jupi`);
+    break;
+  case `ljuta`:
+    console.log(`vat...sou skerd`);
+    break;
+  case `sopping`:
+    console.log(`omg vat`);
+    break;
+  case `mau`:
+    console.log(`tedo gono`);
+  default:
+    console.log(`tedo`);
+}

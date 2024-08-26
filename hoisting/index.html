@@ -4,32 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Hoisting</title>
+    <title>Calculator</title>
   </head>
   <body>
-      <div class="veliki-div">
-          <input class="input" disabled/>
-        <div class="buttons">
-          <button id="dugme" class="dugme-broj">1</button>
-          <button id="dugme" class="dugme-broj">2</button>
-          <button id="dugme" class="dugme-broj">3</button>
-          <button id="dugme" class="dugme">+</button>
+    <div class="veliki-div">
+      <input class="input" disabled />
+      <div class="buttons">
+        <button onclick="klik(`1`)" class="dugme-broj">1</button>
+        <button onclick="klik(`2`)" class="dugme-broj">2</button>
+        <button onclick="klik(`3`)" class="dugme-broj">3</button>
+        <button onclick="klik(`+`)" class="dugme-broj">+</button>
 
-          <button id="dugme" class="dugme-broj">4</button>
-          <button id="dugme" class="dugme-broj">5</button>
-          <button id="dugme" class="dugme-broj">6</button>
-          <button id="dugme" class="dugme">-</button>
+        <button onclick="klik( `4`)" class="dugme-broj">4</button>
+        <button onclick="klik(`5`)" class="dugme-broj">5</button>
+        <button onclick="klik(`6`)" class="dugme-broj">6</button>
+        <button onclick="klik(`-`)" class="dugme-broj">-</button>
 
-          <button id="dugme" class="dugme-broj">7</button>
-          <button id="dugme" class="dugme-broj">8</button>
-          <button id="dugme" class="dugme-broj">9</button>
-          <button id="dugme" class="dugme">*</button>
-       
-          <button id="dugme" class="dugme-broj">0</button>
-          <button id="dugme" class="dugme-broj">C</button>
-          <button id="dugme" class="jednako">=</button>
-          <button id="dugme" class="dugme">/</button>
+        <button onclick="klik(`7`)" class="dugme-broj">7</button>
+        <button onclick="klik(`8`)" class="dugme-broj">8</button>
+        <button onclick="klik(`9`)" class="dugme-broj">9</button>
+        <button onclick="klik(`*`)" class="dugme-broj">*</button>
+
+        <button onclick="klik(`0`)" class="dugme-broj">0</button>
+        <button onclick="reset()" id="c" class="dugme-broj">C</button>
+        <button onclick="jednako()" class="jednako">=</button>
+        <button onclick="klik(`/`)" class="dugme-broj">/</button>
       </div>
+    </div>
     <script src="app.js"></script>
   </body>
 </html>
