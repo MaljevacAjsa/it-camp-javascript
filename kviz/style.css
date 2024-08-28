@@ -20,9 +20,14 @@ body {
   margin: 4px;
   border-radius: 7px;
   width: 300px;
+  transition: 0.3s;
   border: none;
   transition: all 0.3 ease;
   cursor: pointer;
+}
+
+.odgovor:hover {
+  background-color: rgb(58, 109, 199);
 }
 
 .glavni-div {
@@ -37,6 +42,26 @@ body {
   background-color: azure;
   margin-top: 100px;
   border-radius: 15px;
+}
+
+.pocni-kviz {
+  color: white;
+  border: none;
+  transition: all 0.3 ease;
+  background-color: rgb(48, 135, 48);
+  height: 30px;
+  width: 75px;
+  border-radius: 6px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.pocni-kviz:hover {
+  background-color: rgb(44, 121, 44);
+}
+
+.sledece:hover {
+  background-color: rgb(44, 121, 44);
 }
 
 .sledece {

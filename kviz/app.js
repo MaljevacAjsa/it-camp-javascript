@@ -1,6 +1,6 @@
 const quizData = [
   {
-    pitanje: "Koji je glavni grad Francuske?",
+    pitanje: "Koji je glavni grad Nemacke?",
     odgovori: [
       { odgovor: "Berlin", resenje: true },
       { odgovor: "London", resenje: false },
@@ -37,36 +37,92 @@ const quizData = [
   },
 ];
 
-quizData.forEach((pitanje, index) => {
-  // console.log(index[2], pitanje, pitanje.odgovori);
-  // console.log(quizData[0]);
-});
+const questionCon = document.querySelector(".questionCon");
+const odgovorii = document.querySelector(".odgovori");
+const sledece = document.querySelector(".sledece");
+const pocnii = document.querySelector(".pocni-kviz");
 
-const pitanje1 = quizData[0].pitanje;
-const pitanje2 = quizData[1].pitanje;
-const pitanje3 = quizData[2].pitanje;
-const pitanje4 = quizData[3].pitanje;
+let score = 0;
+let trenutnoPitanjeIndex = 0;
+questionCon = "";
+odgovorii = "";
 
-const odgovori1 = quizData[0].odgovori;
-const odgovori2 = quizData[1].odgovori;
-const odgovori3 = quizData[2].odgovori;
-const odgovori4 = quizData[3].odgovori;
+function pocni() {
+  function startQuiz() {
+    score = 0;
+    trenutnoPitanjeIndex = 0;
+    showQA(quizData[trenutnoPitanjeIndex]);
+    pocni.innerHTML = "";
+  }
 
-console.log(pitanje1);
-console.log(odgovori1);
+  function showQA(question) {
+    pocnii.style.display = "none";
+    const sledece = document.createElement("button");
+    sledece.className = "sledece";
+    sledece.innerText = "Sledece";
+    questionCon.innerText = question.pitanje;
+    odgovorii.innerHTML = "";
+    question.odgovori.forEach((odgovor) => {
+      const dugme = document.createElement("button");
+      dugme.className = "odgovor";
+      dugme.innerHTML = odgovor.odgovor;
+      dugme.addEventListener("click", function () {
+        console.log(odgovor.odgovor);
+        if (odgovor.resenje === true) {
+          score++;
+          console.log(odgovor.resenje);
+          console.log(score);
+        }
+      });
+      odgovorii.appendChild(dugme);
+    });
+    // score da proverimo jel tacno dugme pa da se doda
+    sledece.addEventListener("click", function () {
+      trenutnoPitanjeIndex++;
+      if (trenutnoPitanjeIndex < quizData.length) {
+        showQA(quizData[trenutnoPitanjeIndex]);
+      } else {
+        questionCon.innerText = "Quiz completed! Your score: " + score;
+        odgovorii.innerHTML = "";
+        sledece.style.display = "none";
+      }
+    });
+  }
 
-console.log(pitanje2);
-console.log(odgovori2);
+  startQuiz();
+}
 
-console.log(pitanje3);
-console.log(odgovori3);
+pocni();
 
-console.log(pitanje4);
-console.log(odgovori4);
+// quizData.forEach((index) => {
+//   console.log(index[0].pitanje.odgovori);
+// });
 
-const glavniDiv = document.querySelector(".glavni-div");
-glavniDiv.appendChild(pitanje1);
-function pocni() {}
+// const pitanje1 = quizData[0].pitanje;
+// const pitanje2 = quizData[1].pitanje;
+// const pitanje3 = quizData[2].pitanje;
+// const pitanje4 = quizData[3].pitanje;
+
+// const odgovori1 = quizData[0].odgovori;
+// const odgovori2 = quizData[1].odgovori;
+// const odgovori3 = quizData[2].odgovori;
+// const odgovori4 = quizData[3].odgovori;
+
+// console.log(pitanje1);
+// console.log(odgovori1);
+
+// console.log(pitanje2);
+// console.log(odgovori2);
+
+// console.log(pitanje3);
+// console.log(odgovori3);
+
+// console.log(pitanje4);
+// console.log(odgovori4);
+
+// const glavniDiv = document.querySelector(".glavni-div");
+// glavniDiv.appendChild(pitanje1);
+// function pocni() {}
 
 // function pojavi() {
 //   quizData.forEach((pitanje, index) => {
