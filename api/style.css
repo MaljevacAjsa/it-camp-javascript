@@ -1,0 +1,49 @@
+.p {
+  color: rgba(0, 0, 0, 0.854);
+  background-color: rgb(255, 255, 255);
+  width: 380px;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.p .pd {
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.p h1 {
+  font-size: 18px;
+  color: rgb(0, 0, 0);
+}
+
+.kategorija {
+  color: rgba(0, 0, 0, 0.769);
+  font-weight: 100px;
+  font-size: 10px;
+}
+
+.p p {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.p img {
+  height: 300px;
+  border-radius: 15px;
+}
+
+.productList {
+  justify-content: space-around;
+  align-items: start;
+  display: flex;
+}
+
+body {
+  background-color: rgb(18, 18, 30);
+}
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
