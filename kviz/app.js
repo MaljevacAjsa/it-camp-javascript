@@ -41,6 +41,7 @@ const questionCon = document.querySelector(".questionCon");
 const odgovorii = document.querySelector(".odgovori");
 const sledece = document.querySelector(".sledece");
 const pocnii = document.querySelector(".pocni-kviz");
+const naslov = document.querySelector(".h2");
 
 let score = 0;
 let trenutnoPitanjeIndex = 0;
@@ -55,40 +56,58 @@ function pocni() {
     pocni.innerHTML = "";
   }
 
+  // dugme.addEventListener("click", function () {
+  //   console.log(odgovor.odgovor);
+  //   if (odgovor.resenje === true) {
+  //     score++;
+  //     console.log(odgovor.resenje);
+  //     console.log(score);
+  //   }
+
   function showQA(question) {
     pocnii.style.display = "none";
     const sledece = document.createElement("button");
     sledece.className = "sledece";
-    sledece.innerText = "Sledece";
+    sledece.innerText = "Next";
     questionCon.innerText = question.pitanje;
     odgovorii.innerHTML = "";
     question.odgovori.forEach((odgovor) => {
       const dugme = document.createElement("button");
       dugme.className = "odgovor";
-      dugme.innerHTML = odgovor.odgovor;
-      dugme.addEventListener("click", function () {
-        console.log(odgovor.odgovor);
-        if (odgovor.resenje === true) {
+      dugme.innerText = odgovor.odgovor;
+      odgovor.innerText = odgovor.odgovor;
+      odgovorii.appendChild(dugme);
+      odgovorii.appendChild(sledece);
+      function dugmee(question) {
+        if (question.resenje) {
           score++;
-          console.log(odgovor.resenje);
+          console.log(question.resenje);
           console.log(score);
         }
+      }
+      dugme.addEventListener("click", function () {
+        dugmee(odgovor);
+        console.log(score);
+        console.log(odgovor.resenje);
+        console.log(odgovor.odgovor);
       });
-      odgovorii.appendChild(dugme);
     });
+
     // score da proverimo jel tacno dugme pa da se doda
+    // asinhrone funkcije
     sledece.addEventListener("click", function () {
       trenutnoPitanjeIndex++;
-      if (trenutnoPitanjeIndex < quizData.length) {
+      if (trenutnoPitanjeIndex <= quizData.length) {
         showQA(quizData[trenutnoPitanjeIndex]);
       } else {
-        questionCon.innerText = "Quiz completed! Your score: " + score;
+        questionCon.innerText = `Zavrsili ste kviz.
+        Rezultat je: ${score} od ${quizData.length}`;
+        naslov.style.display = "none";
         odgovorii.innerHTML = "";
         sledece.style.display = "none";
       }
     });
   }
-
   startQuiz();
 }
 
